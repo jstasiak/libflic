@@ -47,7 +47,7 @@ pub fn decode_fli_brun(src: &[u8], dst: &mut RasterMut)
     for row in dst.buf[start..end].chunks_mut(dst.stride) {
         let start = dst.x;
         let end = start + dst.w;
-        let mut row = &mut row[start..end];
+        let row = &mut row[start..end];
         let mut x0 = 0;
 
         // Skip obsolete count byte.

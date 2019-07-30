@@ -83,7 +83,7 @@ pub fn decode_fli_ss2(src: &[u8], dst: &mut RasterMut)
 
         let start = dst.stride * (dst.y + y);
         let end = dst.stride * (dst.y + y + 1);
-        let mut row = &mut dst.buf[start..end];
+        let row = &mut dst.buf[start..end];
         let mut x0 = dst.x;
 
         for _ in 0..count {
